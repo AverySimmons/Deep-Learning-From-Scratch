@@ -8,15 +8,15 @@
 ---
 
 ### Description:
-&nbsp;&nbsp;&nbsp;&nbsp;This project aims to reinvent the deep learning wheel entirely from scratch in C, with comprehensive test coverage. I have always been fascinated by the inner workings of deep learning. In order to gain a deeper understanding of the so-called black box, and to greaten my technical knowledge of low-level programming, I have decided to create a codebase from scratch. This codebase is designed to train a deep neural network on data from a CSV file using gradient descent.
+&nbsp;&nbsp;&nbsp;&nbsp;This project aims to reinvent the deep learning wheel entirely from scratch in C, with comprehensive test coverage. I have always been fascinated by the inner workings of deep learning. To gain a deeper understanding of the so-called black box and to increase my technical knowledge of low-level programming, I decided to create a codebase from scratch. This codebase is designed to train a deep neural network on data from a CSV file using gradient descent.
 
 ### Features:
 - &nbsp;&nbsp;&nbsp;&nbsp;**Low Level:**  
-Since this project is build in C all memory allocation and garbage collection is done manually and all data structures are custom made. For example each neural network is a structure composed of layers that are each two allocated array's, one of weights and the other of biases. Each of these structures is allocated and freed using functions that accept the size of the network's layers as inputs.
+Since this project is built in C, all memory allocation and garbage collection is done manually, and all data structures are custom-made. For example, each neural network is a structure composed of layers that are each two allocated arrays, one of the weights and the other of biases. Each of these structures is allocated and freed using functions that accept the size of the network's layers as inputs.
 
 - &nbsp;&nbsp;&nbsp;&nbsp;**Deep Learning:**  
-Network's in this project are densly connected with ReLU activation functions and use gradient decent through back propogation to learn. Both forward and backward passes through the network are acomplished through matrix multiplication, an interesting feature here is that when training the networks feed forward and backward subsets of the data simultaneously leading to some three dimensional matrices.  
-(an addition note is that really the matrix multiplication should be parallelized across the gpu, originally I was using the CBLAS software to acomplish this, but ran into too many problems to make it worth the effort.)
+Networks in this project are densely connected with ReLU activation functions and use gradient descent through back-propagation to learn. Both forward and backward passes through the network are accomplished through matrix multiplication; an interesting feature here is that when training, the networks feed forward and backward subsets of the data simultaneously, leading to some three-dimensional matrices.  
+(an additional note is that, really, the matrix multiplication should be parallelized across the GPU. Initially, I was using the CBLAS software to accomplish this, but I ran into too many problems to make it worth the effort.)
 
 - &nbsp;&nbsp;&nbsp;&nbsp;**Test Driven:**  
 All functions in this project have full test coverage. At first I thought this might be too much work, but after realizing how hard it would be to find mathmatical errors within individual functions (because these errors would only result in the model learning slower or not at all), I decided that tests were a necessity.
@@ -33,4 +33,4 @@ General matrix operations such as addition, multiplication, etc. as well as ReLU
 Data structures and functions for allocating, freeing, and training neural networks.
 
 - &nbsp;&nbsp;&nbsp;&nbsp;**Data Loading:**  
-Logic needed to load csv file data into a input data structure, which can be used for functions inisde the Neural Network file.
+Logic needed to load CSV file data into an input data structure, which can be used for functions inside the Neural Network file.
